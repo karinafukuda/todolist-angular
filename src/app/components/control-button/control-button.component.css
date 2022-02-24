@@ -1,0 +1,11 @@
+.btn-wrapper {
+  margin: 0.5rem;
+}
+
+.btn-menu {
+  flex-basis: 30%;
+}
+
+.active {
+  background-color: var(--md-gray);
+}

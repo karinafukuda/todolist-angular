@@ -1,0 +1,28 @@
+<div class="main">
+  <app-title></app-title>
+  <label for="addItemInput">O que gostaria de fazer hoje?</label>
+  <div class="form">
+    <input
+      #newItem
+      placeholder="Digite uma nova tarefa "
+      (keyup.enter)="addItem(newItem.value); newItem.value = ''"
+      class="lg-text-input"
+      id="addItemInput"
+    />
+
+    <button class="btn-primary" (click)="addItem(newItem.value)">
+      Adicionar
+    </button>
+  </div>
+
+  <!-- <control-button></control-button> -->
+
+  <count-task [items]="items"></count-task>
+
+  <ul>
+    <li *ngFor="let item of items">
+      <app-item (remove)="remove(item)" [item]="item"></app-item>
+      <hr />
+    </li>
+  </ul>
+</div>
