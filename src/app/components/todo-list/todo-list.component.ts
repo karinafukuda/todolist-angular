@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
 import { Item } from 'src/app/interfaces/item.interface';
 
 @Component({
@@ -6,7 +6,8 @@ import { Item } from 'src/app/interfaces/item.interface';
   templateUrl: './todo-list.component.html',
   styleUrls: ['./todo-list.component.css'],
 })
-export class TodoListComponent implements OnInit {
+export class TodoListComponent implements AfterViewInit {
+  @ViewChild('newItem') input: any;
   itemInput: Item;
   msg = 'Você precisa adicionar um texto para uma nova tarefa!';
   filter: 'all' | 'active' | 'done' = 'all';
@@ -37,6 +38,8 @@ export class TodoListComponent implements OnInit {
       description,
       done: false,
     });
+
+    this.input.nativeElement.value = '';
   }
 
   //splice: método de array que remove um elemento de acordo com a posição.
@@ -44,5 +47,7 @@ export class TodoListComponent implements OnInit {
     this.allItems.splice(this.allItems.indexOf(item), 1);
   }
 
-  ngOnInit(): void {}
+  ngAfterViewInit() {
+    console.log(this.input.value);
+  }
 }

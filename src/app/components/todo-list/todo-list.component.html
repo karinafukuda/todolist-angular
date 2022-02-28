@@ -3,14 +3,15 @@
   <label for="addItemInput">O que gostaria de fazer hoje?</label>
   <div class="form">
     <input
+      ngModel
       #newItem
       placeholder="Digite uma nova tarefa "
-      (keyup.enter)="addItem(newItem.value); newItem.value = ''"
+      (keyup.enter)="addItem(newItem.value)"
       class="lg-text-input"
       id="addItemInput"
     />
 
-    <button class="btn-primary" (click)="addItem(newItem.value)">
+    <button id="btnSubmit" class="btn-primary" (click)="addItem(newItem.value)">
       Adicionar
     </button>
   </div>
