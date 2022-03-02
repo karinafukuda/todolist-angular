@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ViewChild } from '@angular/core';
 import { Item } from 'src/app/interfaces/item.interface';
 
 @Component({
@@ -8,7 +8,6 @@ import { Item } from 'src/app/interfaces/item.interface';
 })
 export class TodoListComponent implements AfterViewInit {
   @ViewChild('newItem') input: any;
-  itemInput: Item;
   msg = 'Você precisa adicionar um texto para uma nova tarefa!';
   filter: 'all' | 'active' | 'done' = 'all';
 
