@@ -6,7 +6,7 @@
   --md-gray: #444242;
   --dark-gray: #333;
   --black: #000;
-  --blue: #324bed;
+  --blue: #00fd;
   --btn-active: #d1e0fe;
   --btn-hover: #ecf2fd;
   --btn-warn: #900;
@@ -29,11 +29,13 @@ body {
 .btn {
   color: var(--dark-gray);
   background-color: var(--white);
-  border: 1.5px solid var(--gray);
-  padding: 0.1rem;
+  border: none;
+  padding: 0.2rem;
   font-size: 1rem;
   border-radius: 6px;
   margin-left: 10px;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
 }
 
 .btn:hover {
@@ -51,10 +53,11 @@ body {
 
 .btn-primary {
   color: var(--white);
-  background-color: var(--black);
-  width: 20%;
-  padding: 0.95rem 0;
+  background-color: var(--dark-gray);
+  width: 87%;
+  padding: 0.5rem 0;
   font-size: 1rem;
+  cursor: pointer;
 }
 
 .btn-primary:hover {
@@ -70,8 +73,12 @@ body {
 
 .btn-primary:active {
   background-color: var(--md-gray);
+  color: var(--white);
 }
 
 ul li {
   list-style: none;
+  margin-left: -1.2em;
+  color: var(--black);
+  font-weight: 500;
 }

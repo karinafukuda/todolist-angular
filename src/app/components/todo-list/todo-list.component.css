@@ -5,23 +5,29 @@
   padding: 0.5rem;
   text-align: center;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 2.5rem 5rem 0 rgba(0, 0, 0, 0.1);
+  background-image: radial-gradient(
+    circle at 43.89% 56.11%,
+    #99eff3 0,
+    #96e1e7 25%,
+    #93d2d9 50%,
+    #90c3cb 75%,
+    #8cb6bd 100%
+  );
+}
+
+.task {
+  word-break: break-word;
 }
 
 .form {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-.task {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-@media screen and (min-width: 600px) {
+@media screen and (max-width: 600px) {
   .main {
-    width: 70%;
+    width: 90%;
   }
 }

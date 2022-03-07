@@ -27,7 +27,6 @@ export class TodoListComponent implements OnInit {
     );
   }
 
-  //unshift: é um método de array que adiciona o el. no index 0 de retorna novo array.
   addItem(item: Item) {
     this.allItems.unshift(item);
   }
