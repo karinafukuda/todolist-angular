@@ -23,11 +23,14 @@ export class ItemComponent {
   completeItem() {
     this.update.emit({
       item: this.item,
-      changes: { completed: this.item.done },
     });
   }
 
   removeItem() {
     this.remove.emit(this.item);
+  }
+
+  isEditable() {
+    this.editable = !this.editable;
   }
 }

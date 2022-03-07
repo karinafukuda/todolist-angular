@@ -7,33 +7,17 @@
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 2.5rem 5rem 0 rgba(0, 0, 0, 0.1);
 }
 
-/* input {
-  outline: none;
-}
-
-label {
-  font-size: 1rem;
-  font-weight: 700;
-  padding: 5rem 0;
-}
-
-ul {
-  padding-inline-start: 0;
-}
-
-.lg-text-input {
-  width: 80%;
-  padding: 0.95rem;
-  border: 1.5px solid var(--black);
-  font-size: 1rem;
-}
-*/
-
 .form {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
+}
+
+.task {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 @media screen and (min-width: 600px) {

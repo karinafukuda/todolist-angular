@@ -8,7 +8,7 @@
   <count-task [items]="items"></count-task>
 
   <ul>
-    <li *ngFor="let item of items">
+    <li class="task" *ngFor="let item of items">
       <app-item (remove)="remove($event)" [item]="item"></app-item>
       <hr />
     </li>
