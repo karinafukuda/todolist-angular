@@ -1,0 +1,20 @@
+input {
+  outline: none;
+}
+
+label {
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 5rem 0;
+}
+
+ul {
+  padding-inline-start: 0;
+}
+
+.lg-text-input {
+  width: 80%;
+  padding: 0.95rem;
+  border: 1.5px solid var(--black);
+  font-size: 1rem;
+}

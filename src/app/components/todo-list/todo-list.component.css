@@ -7,7 +7,7 @@
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 2.5rem 5rem 0 rgba(0, 0, 0, 0.1);
 }
 
-input {
+/* input {
   outline: none;
 }
 
@@ -27,6 +27,7 @@ ul {
   border: 1.5px solid var(--black);
   font-size: 1rem;
 }
+*/
 
 .form {
   display: flex;

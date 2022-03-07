@@ -26,4 +26,8 @@ export class ItemComponent {
       changes: { completed: this.item.done },
     });
   }
+
+  removeItem() {
+    this.remove.emit(this.item);
+  }
 }

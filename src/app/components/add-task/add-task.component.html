@@ -1,0 +1,11 @@
+<label for="addItemInput">O que gostaria de fazer hoje?</label>
+<input
+  #newItem
+  placeholder="Digite uma nova tarefa "
+  (keyup.enter)="addItem(newItem.value)"
+  class="lg-text-input"
+  id="addItemInput"
+/>
+<button id="btnSubmit" class="btn-primary" (click)="addItem(newItem.value)">
+  Adicionar
+</button>
