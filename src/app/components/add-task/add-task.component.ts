@@ -15,7 +15,7 @@ import { Item } from 'src/app/interfaces/item.interface';
 export class AddTaskComponent {
   @ViewChild('newItem') input: ElementRef;
   @Output() itemAdd = new EventEmitter<Item>();
-  msg = 'Você precisa adicionar um texto para uma nova tarefa!';
+  msg: string = 'Você precisa adicionar um texto para uma nova tarefa!';
 
   addItem(description: string) {
     if (!description) {

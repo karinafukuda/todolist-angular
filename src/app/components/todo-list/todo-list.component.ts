@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Item } from 'src/app/interfaces/item.interface';
 
 @Component({
@@ -6,9 +6,7 @@ import { Item } from 'src/app/interfaces/item.interface';
   templateUrl: './todo-list.component.html',
   styleUrls: ['./todo-list.component.css'],
 })
-export class TodoListComponent implements OnInit {
-  @Input('newItem') input: any;
-  @Input() itemList: string;
+export class TodoListComponent {
   msg = 'Você precisa adicionar um texto para uma nova tarefa!';
   filter: 'all' | 'active' | 'done' = 'all';
 
@@ -27,12 +25,11 @@ export class TodoListComponent implements OnInit {
     );
   }
 
-  addItem(item: Item) {
+  addItem(item: Item): void {
     this.allItems.unshift(item);
   }
 
-  remove(item: Item) {
+  remove(item: Item): void {
     this.allItems.splice(this.allItems.indexOf(item), 1);
   }
-  ngOnInit(): void {}
 }
