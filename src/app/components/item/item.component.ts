@@ -20,10 +20,17 @@ export class ItemComponent {
     this.item.description = description;
   }
 
-  completeItem() {
+  completeItem(): void {
     this.update.emit({
       item: this.item,
-      changes: { completed: this.item.done },
     });
+  }
+
+  removeItem(): void {
+    this.remove.emit(this.item);
+  }
+
+  isEditable(): void {
+    this.editable = !this.editable;
   }
 }
