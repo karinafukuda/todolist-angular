@@ -35,6 +35,62 @@ ul {
   justify-content: center;
 }
 
+.btn-wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: right;
+  border-radius: 6px;
+}
+
+.btn {
+  color: var(--dark-gray);
+  background-color: var(--white);
+  border: 1.5px solid var(--gray);
+  padding: 0.1rem;
+  font-size: 1rem;
+  border-radius: 6px;
+}
+
+.btn:hover {
+  background-color: var(--btn-hover);
+}
+
+.btn:active {
+  background-color: var(--btn-active);
+}
+
+.btn:focus {
+  outline: none;
+  border: var(--gray) solid 2px;
+}
+
+.btn-primary {
+  color: var(--white);
+  background-color: var(--black);
+  width: 20%;
+  padding: 0.95rem 0;
+  font-size: 1rem;
+}
+
+.btn-primary:hover {
+  background-color: var(--md-gray);
+}
+
+.btn-primary:focus {
+  color: var(--black);
+  outline: none;
+  border: var(--black) solid 2px;
+  background-color: var(--btn-active);
+}
+
+.btn-primary:active {
+  background-color: var(--md-gray);
+}
+
+ul li {
+  list-style: none;
+}
+
 @media screen and (min-width: 600px) {
   .main {
     width: 70%;
