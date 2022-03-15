@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Item } from 'src/app/interfaces/item.interface';
 
 @Component({
@@ -6,8 +6,7 @@ import { Item } from 'src/app/interfaces/item.interface';
   templateUrl: './todo-list.component.html',
   styleUrls: ['./todo-list.component.css'],
 })
-export class TodoListComponent implements OnInit {
-  itemInput: Item;
+export class TodoListComponent {
   msg = 'Você precisa adicionar um texto para uma nova tarefa!';
   filter: 'all' | 'active' | 'done' = 'all';
 
@@ -26,23 +25,11 @@ export class TodoListComponent implements OnInit {
     );
   }
 
-  //unshift: é um método de array que adiciona o el. no index 0 de retorna novo array.
-  addItem(description: string) {
-    if (!description) {
-      alert(this.msg);
-      return;
-    }
-
-    this.allItems.unshift({
-      description,
-      done: false,
-    });
+  addItem(item: Item): void {
+    this.allItems.unshift(item);
   }
 
-  //splice: método de array que remove um elemento de acordo com a posição.
-  remove(item: Item) {
+  remove(item: Item): void {
     this.allItems.splice(this.allItems.indexOf(item), 1);
   }
-
-  ngOnInit(): void {}
 }

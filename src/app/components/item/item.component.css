@@ -63,6 +63,23 @@
   margin: 1rem 0;
 }
 
+.checkbox-round {
+  width: 1.3em;
+  height: 1.3em;
+  background-color: white;
+  border-radius: 50%;
+  vertical-align: middle;
+  border: 1px solid #ddd;
+  appearance: none;
+  -webkit-appearance: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.checkbox-round:checked {
+  background-color: var(--blue);
+}
+
 .complete {
   text-decoration: line-through;
   color: var(--md-gray);

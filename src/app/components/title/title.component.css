@@ -1,5 +1,5 @@
 h1 {
   text-transform: uppercase;
-  color: #877;
+  color: var(--dark-gray);
   padding: 1rem;
 }
