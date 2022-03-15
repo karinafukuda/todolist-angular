@@ -26,7 +26,6 @@
   justify-content: center;
 }
 
-<<<<<<< HEAD
 .btn-wrapper {
   display: flex;
   flex-wrap: nowrap;
@@ -83,10 +82,7 @@ ul li {
   list-style: none;
 }
 
-@media screen and (min-width: 600px) {
-=======
 @media screen and (max-width: 600px) {
->>>>>>> ea579ad6a6e5a16c1b5c58dd73a4d581280562d3
   .main {
     width: 90%;
   }
